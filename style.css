@@ -1,0 +1,450 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+.house{
+    position: relative;
+    width: 800px;
+    height: 600px;
+    background-image:linear-gradient(220deg,rgb(252, 252, 146),rgb(141, 204, 229) 60%);
+    border-bottom:8px solid rgb(4, 91, 4);
+}
+.main{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    height: 200px;
+    background: #fff;
+}
+
+.main::before{
+    content: '';
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-color:rgb(172, 170, 170);
+}
+.roof{
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    top: -100px;
+}
+.roof::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    background-color: rgb(16, 45, 94);
+    transform: skewX(330deg);
+}
+.roof::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    background-color: rgb(16, 45, 94);
+    transform: skewX(30deg);
+}
+.front{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180px;
+    height: 180px;
+    background-color:rgb(172, 170, 170);
+}
+.front::before{
+    content:'';
+    position: absolute;
+    left: 14%;
+    top:-36%;
+    width: 126px;
+    height: 126px;
+    background-color:rgb(172, 170, 170);
+    transform: rotate(45deg);
+    border-top: 4px solid black ;
+    border-left: 4px solid black;
+}
+.front::after{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    background-color: black;
+    background-image:linear-gradient(to right,transparent 10%,transparent 90%,black),linear-gradient(to bottom,transparent 10%,rgb(172, 170, 170) 10%,rgb(172, 170, 170) 90%);
+    background-size: 10px 15px;
+    left: 20%;
+    border-top-left-radius:100px ;
+    border-top-right-radius:100px ;
+    border: 4px solid black;
+}
+.door{
+    position: absolute;
+    bottom: 0;
+    left: 35%;
+    width: 50px;
+    height: 80px;
+    background-color: rgb(94, 10, 10);
+    border-top-left-radius:50px;
+    border-top-right-radius:50px;
+}
+.door::before{
+    content: '';
+    position: absolute;
+    left: -50px;
+    width: 40px;
+    height:40px;
+    background-color: black;
+    background-image:linear-gradient(to right,transparent 10%,transparent 90%,black),linear-gradient(to bottom,transparent 10%,rgb(172, 170, 170) 10%,rgb(172, 170, 170) 90%);
+    background-size: 10px 10px;
+    border:2px solid black;
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+
+}
+.door::after{
+    content: '';
+    position: absolute;
+    right: -50px;
+    width: 40px;
+    height:40px;
+    background-color: black;
+    background-image:linear-gradient(to right,transparent 10%,transparent 90%,black),linear-gradient(to bottom,transparent 10%,rgb(172, 170, 170) 10%,rgb(172, 170, 170) 90%);
+    background-size: 10px 10px;
+    border:2px solid black;
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+}
+.doorknob{
+    position:absolute;
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    top: 80%;
+    left: 70px;
+    border-radius: 100%;
+}
+.line{
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    height: 15px;
+    border-top: 5px solid  rgb(16, 45, 94);
+    border-bottom: 5px solid  rgb(16, 45, 94);
+}
+.ajt{
+    top: 40%;
+}
+.window_right{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    right:30px;
+    top: 20px;
+    background-image:linear-gradient(to right,transparent 10%,transparent 90%,black),linear-gradient(to bottom,transparent 10%,rgb(172, 170, 170) 10%,rgb(172, 170, 170) 90%);
+    background-size: 10px 10px;
+    border:2px solid black;
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+}
+.window_right::before{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 70px;
+    background-color: black;
+    top: 90px;
+    background-image:linear-gradient(to right,transparent 10%,transparent 90%,black),linear-gradient(to bottom,transparent 10%,rgb(172, 170, 170) 10%,rgb(172, 170, 170) 90%);
+    background-size: 10px 10px;
+    border:2px solid black;
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+}
+.window_left{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    left:30px;
+    top: 20px;
+    background-image:linear-gradient(to right,transparent 10%,transparent 90%,black),linear-gradient(to bottom,transparent 10%,rgb(172, 170, 170) 10%,rgb(172, 170, 170) 90%);
+    background-size: 10px 10px;
+    border:2px solid black;
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+}
+.window_left::before{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 70px;
+    background-color: black;
+    top: 90px;
+    background-image:linear-gradient(to right,transparent 10%,transparent 90%,black),linear-gradient(to bottom,transparent 10%,rgb(172, 170, 170) 10%,rgb(172, 170, 170) 90%);
+    background-size: 10px 10px;
+    border:2px solid black;
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+}
+.chimney{
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    background-color:#fff;
+    left: 15%;
+    top: -30%;
+   }
+.chimney::before{
+    content: '';
+    position: absolute;
+    left: -25%;
+    width: 150%;
+    height: 20px;
+    background-color: rgb(16, 45, 94);
+    top: -40%;
+}
+
+.smoke{
+    position: fixed;
+    width: 20px;
+    height: 30px;
+    background-image:linear-gradient(45deg,grey,white 30%);
+    opacity: 0.7;
+    transform:rotate(45deg);
+    border-radius: 130%;
+    left: 18%;
+    top: -50%;
+}
+.smoke::before{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 40px;
+    background-image:linear-gradient(45deg,white 90%,grey 50%);
+    opacity: 0.7;
+    border-radius: 140%;
+    left: 10%;
+    top: -120%;
+}
+.smoke::after{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 30px;
+    background-image:linear-gradient(45deg,grey,white 50%);
+    opacity: 0.7;
+    border-radius: 140%;
+    left: 10%;
+    top: -60%;
+}
+.sun{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(255, 255, 69);
+    border-radius: 100%;
+    right: 0px;
+}
+.grass{
+    position: absolute;
+    width: 70px;
+    height: 50px;
+    background-color: rgba(0, 90, 0, 0.945);
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    right: -50px;
+    bottom: 0;
+}
+.grass::before{
+    content: '';
+    position: absolute;
+    width: 90px;
+    height: 70px;
+    background-color: rgba(0, 90, 0, 0.945);
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    right: -60px;
+    bottom: 0;
+}
+.flower{
+    position:absolute;
+    width: 10px;
+    height: 10px;
+    background-image: linear-gradient(to bottom,rgb(252, 43, 78),pink);
+    border-bottom-left-radius:100%;
+    border-bottom-right-radius:100%;
+    border-top-left-radius:50%;
+    border-top-right-radius:50%;
+    left: 100%;
+}
+.flower::before{
+    content: '';
+    position:absolute;
+    width: 10px;
+    height: 10px;
+    background-image: linear-gradient(to bottom,rgb(252, 43, 78),pink);
+    border-bottom-left-radius:100%;
+    border-bottom-right-radius:100%;
+    border-top-left-radius:50%;
+    border-top-right-radius:50%;
+    left: -400%;
+    top: 10px;
+}
+.flower::after{
+    content: '';
+    position:absolute;
+    width: 10px;
+    height: 10px;
+    background-image: linear-gradient(to bottom,rgb(252, 43, 78),pink);
+    border-bottom-left-radius:100%;
+    border-bottom-right-radius:100%;
+    border-top-left-radius:50%;
+    border-top-right-radius:50%;
+    left: 400%;
+    top: 10px;
+}
+.tree{
+    position:absolute;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(0, 90, 0, 0.945);
+    border-top-left-radius:100%;
+    border-bottom-right-radius: 100%;
+    transform: rotate(-45deg);
+    left: -150px;
+    bottom:35px;
+}
+.tree::before{
+    content: '';
+    position:absolute;
+    width: 10px;
+    height: 50px;
+    background-color: rgb(96, 22, 22);
+    bottom:-20px;
+    transform: rotate(45deg);
+    
+}
+.main1{
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 200px;
+    background: #fff;
+}
+.main1::before{
+    content: '';
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-color:rgb(172, 170, 170);
+}
+.roof1{
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    top: -50px;
+}
+.roof1::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    background-color: rgb(16, 45, 94);
+    transform: skewX(330deg);
+}
+.roof1::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    background-color: rgb(16, 45, 94);
+    transform: skewX(30deg);
+}
+.door1{
+    position: absolute;
+    bottom: 50%;
+    left: 35%;
+    width: 50px;
+    height: 80px;
+    background-color: rgb(94, 10, 10);
+    border-top-left-radius:50px;
+    border-top-right-radius:50px;
+}
+.door1::before{
+    content: '';
+    position: absolute;
+    left: -50px;
+    width: 40px;
+    height:40px;
+    background-color: black;
+    background-image:linear-gradient(to right,transparent 10%,transparent 90%,black),linear-gradient(to bottom,transparent 10%,rgb(172, 170, 170) 10%,rgb(172, 170, 170) 90%);
+    background-size: 10px 10px;
+    border:2px solid black;
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+
+}
+.door1::after{
+    content: '';
+    position: absolute;
+    right: -50px;
+    width: 40px;
+    height:40px;
+    background-color: black;
+    background-image:linear-gradient(to right,transparent 10%,transparent 90%,black),linear-gradient(to bottom,transparent 10%,rgb(172, 170, 170) 10%,rgb(172, 170, 170) 90%);
+    background-size: 10px 10px;
+    border:2px solid black;
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+}
+.door1knob{
+    position:absolute;
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    top: 100%;
+    left: 70px;
+    border-radius: 100%;
+}
+.line1{
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    height: 15px;
+    border-top: 5px solid  rgb(16, 45, 94);
+    border-bottom: 5px solid  rgb(16, 45, 94);
+}
+
+
+
+
+
+
+
